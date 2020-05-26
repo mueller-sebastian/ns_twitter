@@ -64,7 +64,7 @@ class TweetController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $auth = base64_encode(urlencode($consumer['key']) . ':' . urlencode($consumer['secret']));
             $username = urlencode($settings['username']);
             $params['exclude_replies'] = $this->settings['exclude_replies'];
-            $params['include_rts'] = $this->settings['include_rts']==1 ? 0 : 1;
+            $params['include_rts'] = $this->settings['include_rts']==1 ? 1 : 0;
             $params['tweet_mode'] = $this->settings['tweet_mode'];
             $params['count'] = $limit;
             try {
